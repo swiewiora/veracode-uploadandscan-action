@@ -79,8 +79,10 @@ inputs:
   includenewmodules:
     description: 'automatically select all new top-level modules for inclusion in the scan'
     required: false  
-    
- 
+  lifecyclestage:
+    description: 'One of these lifecycle stage values: NotSpecified, InDevelopmentPreAlpha, InternalOrAlphaTesting, ExternalOrBetaTesting, DeployedInProductionAndActivelyDeveloped, MaintenanceOnlyBugFixes, CannotDisclose'
+    required: false  
+
 # outputs:
 #   time: # id of output
 #     description: 'The time we greeted you'
@@ -113,3 +115,4 @@ runs:
     - ${{ inputs.javawrapperversion }}
     - ${{ inputs.debug }}
     - ${{ inputs.includenewmodules }}
+    - ${{ inputs.lifecyclestage }}
